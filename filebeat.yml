@@ -1,0 +1,18 @@
+# 输入
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - ./*.log
+#输出
+output.logstash:
+  hosts: ["localhost:5044"]
+
+# output.elasticsearch:
+#         hosts: ["http://localhost:9200"]
+#         username: "elastic"
+#         password: "wsjcko@123456"
+#   # If using Elasticsearch's default certificate
+#   #ssl.ca_trusted_fingerprint: "<es cert fingerprint>"
+# setup.kibana:
+#         host: "http://localhost:5601"
